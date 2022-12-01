@@ -77,6 +77,19 @@
 \setbeamercolor{caption name}{fg=jet}
 \setbeamerfont{caption name}{shape = \itshape}
 
+% Put slide number / total slides at the bottom right
+\makeatother
+\setbeamertemplate{footline} %{\hfill\insertframenumber/\inserttotalframenumber}
+{%
+  \leavevmode%
+  \hbox{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{footlinecolor}%
+    \hfill\insertframenumber/\inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatletter
+
 % Bullet points
 
 %% Fix left-margins
