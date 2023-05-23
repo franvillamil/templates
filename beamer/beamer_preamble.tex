@@ -86,15 +86,17 @@
 
 % Put slide number / total slides at the bottom right
 \makeatother
+\makeatletter
 \setbeamertemplate{footline} %{\hfill\insertframenumber/\inserttotalframenumber}
 {%
   \leavevmode%
   \hbox{
   \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{footlinecolor}%
-    \color{asher}{\insertshorttitle\hfill\insertshortauthor\hfill\insertshortdate\hfill\insertframenumber/\inserttotalframenumber}
+    \color{asher}{{\let\hyperlink\@secondoftwo\insertshorttitle}\hfill\insertshortauthor\hfill\insertshortdate\hfill\insertframenumber/\inserttotalframenumber}
   \end{beamercolorbox}}%
   \vskip0pt%
 }
+\makeatother
 \makeatletter
 
 % Bullet points
