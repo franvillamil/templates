@@ -54,14 +54,18 @@
 \setbeamertemplate{title page}
 {
     \begin{centering}
-        % \vspace{20mm}
-        {\Large \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\\ \vskip0.25em%
-        \ifx\insertsubtitle\@empty%
-        \else%
-          {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
-        \fi%
-        {\vspace{10mm}\insertauthor}\\
-        {\color{asher}\small{\insertdate}}\\
+      % \vspace{20mm}
+      {\Large \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\\ \vskip0.25em%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%
+      {\vspace{10mm}\insertauthor}\\
+      \ifx\insertinstitute\@empty%
+      \else%
+        {\vspace{5mm}\color{asher}\scriptsize{\insertinstitute}}\\\vspace{5mm}
+      \fi%
+      {\color{asher}\small{\insertdate}}\\
     \end{centering}
 }
 
@@ -87,7 +91,7 @@
   \leavevmode%
   \hbox{
   \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{footlinecolor}%
-    \hfill\insertframenumber/\inserttotalframenumber
+    \color{asher}{\insertshorttitle\hfill\insertshortauthor\hfill\insertshortdate\hfill\insertframenumber/\inserttotalframenumber}
   \end{beamercolorbox}}%
   \vskip0pt%
 }
