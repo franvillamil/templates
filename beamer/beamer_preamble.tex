@@ -25,8 +25,13 @@
 \newcommand\BGyellow[1]{{\colorbox{yellow!80!white}{#1}}}
 \newcommand\BGasher[1]{{\colorbox{asher!80!white}{#1}}}
 
+% to use only in some slides
+\renewcommand<>{\BGyellow}[1]{\only#2{\beameroriginal{\BGyellow}}{#1}}
+
 % Appendix numbering
 \usepackage{appendixnumberbeamer}
+% Math equations
+\usepackage{amsmath}
 
 % Beamer Options -------------------------------------
 
