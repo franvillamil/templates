@@ -4,18 +4,26 @@
 \usepackage[utf8]{inputenc}
 \usepackage[table]{xcolor}
 \usepackage{graphicx, booktabs, tikz, enumitem, dcolumn, pdfpages, csquotes}
-\usepackage[font=normalsize]{caption}%,labelfont=bf
+\usepackage[font=normalsize]{caption}
 \usepackage{subcaption}
 
+% External documents
 \usepackage{xr-hyper}
 \usepackage[colorlinks = TRUE, allcolors = blue]{hyperref}
 \externaldocument{appendix}
 
+% Fonts and paragraphs
+% \usepackage[parfill]{parskip}
+% \usepackage[sfdefault]{carlito}
 \renewcommand*\rmdefault{ppl}
+% \usepackage{times}
+% \usepackage[semibold]{ebgaramond}
 
+% Spacing
 \usepackage{setspace}
 \setstretch{1.5}
 
+% Title formats
 \usepackage[]{titlesec}
     \titleformat*{\section}{\large\bf}
     \titleformat*{\subsection}{\normalsize\it}
@@ -24,15 +32,22 @@
 \usepackage[round]{natbib}
 \setlength{\bibsep}{0pt}
 
+% Rogue lines
 \widowpenalty=10000
 \clubpenalty=10000
 
+% Avoid splitting (word counting)
+% \usepackage[none]{hyphenat}
+
+% ---------------------------------------------------------------
+% Title stuff
 \title{\Large Title}
 \author{Francisco Villamil\footnote{Carlos III-Juan March Institute, Universidad Carlos III de Madrid. Contact: francisco.villamil@uc3m.es}}
 \date{\today}
+% ---------------------------------------------------------------
 
-% \usepackage[none]{hyphenat}
-
+% ===============================================================
+% ===============================================================
 \begin{document}
 
 \maketitle
@@ -48,11 +63,13 @@ Abstract.
 \end{abstract}
 \setstretch{1.5}
 
+% ===============================================================
 \newpage
 \setcounter{page}{1}
-
 \section*{Introduction}
 
+
+% ===============================================================
 \bibliographystyle{apsr}
 \bibliography{/Users/franvillamil/Dropbox/REF.bib}
 
@@ -60,3 +77,5 @@ Abstract.
 % \includepdf[pages=-]{appendix.pdf}
 
 \end{document}
+% ===============================================================
+% ===============================================================
